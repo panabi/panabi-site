@@ -1,0 +1,642 @@
+/* =========================================
+パナビー｜オンライン家庭教師サービス
+GitHub Pages対応 CSS
+========================================= */
+
+/* 1. 基本設定 */
+html {
+scroll-behavior: smooth;
+scroll-padding-top: 80px;
+}
+
+* {
+  box-sizing: border-box;
+  }
+
+body {
+font-family: "Noto Sans JP", sans-serif;
+color: #333333;
+line-height: 1.8;
+margin: 0;
+padding-top: 60px;
+background-color: #ffffff;
+}
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+.container {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+/* 2. ヘッダー */
+.header {
+background: #ffffff;
+height: 60px;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1000;
+display: flex;
+align-items: center;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 100%;
+}
+
+.logo {
+margin: 0;
+line-height: 1;
+min-width: 0;
+}
+
+.logo a {
+display: flex;
+align-items: center;
+}
+
+.logo img {
+display: block;
+height: 40px;
+width: auto;
+max-width: 100%;
+object-fit: contain;
+}
+
+#nav-list {
+display: flex;
+align-items: center;
+justify-content: flex-end;
+gap: 12px;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+#nav-list a {
+display: inline-block;
+background-color: #f0f8ff;
+color: #007bff;
+text-decoration: none;
+font-weight: bold;
+font-size: 0.85rem;
+padding: 6px 14px;
+border-radius: 20px;
+border: 1px solid #007bff;
+transition: background-color 0.3s, color 0.3s;
+white-space: nowrap;
+}
+
+#nav-list a:hover {
+background-color: #007bff;
+color: #ffffff;
+}
+
+/* 3. メインビジュアル */
+.hero {
+text-align: center;
+padding: 140px 20px;
+margin-top: -60px;
+background: linear-gradient(
+135deg,
+#001b79 0%,
+#007bff 50%,
+#00d4ff 100%
+);
+color: #ffffff;
+}
+
+.hero-content {
+max-width: 800px;
+margin: 0 auto;
+}
+
+.hero .hero-title {
+display: block;
+background: transparent;
+color: #ffffff;
+padding: 0;
+margin: 0 auto 20px;
+width: 100%;
+max-width: 100%;
+border-radius: 0;
+font-size: 2.8rem;
+font-weight: 800;
+line-height: 1.4;
+text-align: center;
+text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+color: #ffffff;
+font-size: 1.2rem;
+font-weight: 500;
+margin: 0 auto 20px;
+text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 4. セクション共通 */
+.section {
+padding: 40px 0;
+text-align: center;
+}
+
+.section-title {
+display: table;
+background-color: #007bff;
+color: #ffffff;
+padding: 15px 30px;
+border-radius: 50px;
+margin: 20px auto 40px;
+text-align: center;
+font-size: 1.6rem;
+font-weight: bold;
+line-height: 1.4;
+width: auto;
+max-width: calc(100% - 30px);
+}
+
+.bg-light {
+background-color: #f5f9ff;
+}
+
+/* 5. グリッドレイアウト */
+.grid-2,
+.grid-3 {
+display: grid;
+gap: 25px;
+align-items: stretch;
+}
+
+.grid-2 {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* 6. カード共通 */
+.card,
+.plan-card,
+.step {
+background: #ffffff;
+border-left: 8px solid #007bff;
+border-radius: 8px;
+padding: 24px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+margin: 0;
+min-width: 0;
+text-align: left;
+}
+
+.card h3,
+.plan-card h3 {
+color: #007bff;
+margin-top: 0;
+font-weight: bold;
+font-size: 1.3rem;
+}
+
+.card p,
+.plan-card p {
+overflow-wrap: anywhere;
+}
+
+/* 7. サービス紹介 */
+#service > .container > p {
+text-align: left;
+}
+
+.catch-copy-box {
+text-align: center;
+}
+
+.service-catch {
+display: inline-block;
+font-size: 1.3rem;
+font-weight: bold;
+color: #007bff;
+background-color: #f0f8ff;
+padding: 10px 30px;
+border-radius: 50px;
+margin: 30px auto;
+border: 2px solid #e6f2ff;
+}
+
+#service > h3.service-catch {
+display: table;
+}
+
+ul.check-list {
+list-style: none;
+padding: 0;
+margin: 0 auto 40px;
+display: table;
+text-align: left;
+}
+
+ul.check-list li {
+font-size: 1.05rem;
+margin-bottom: 15px;
+position: relative;
+padding-left: 35px;
+font-weight: 500;
+line-height: 1.6;
+}
+
+ul.check-list li::before {
+content: "✔";
+position: absolute;
+left: 0;
+top: 2px;
+width: 24px;
+height: 24px;
+background-color: #007bff;
+color: #ffffff;
+font-size: 14px;
+text-align: center;
+line-height: 24px;
+border-radius: 4px;
+box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3);
+}
+
+/* 8. 料金プラン */
+.price {
+font-size: 2.5rem;
+font-weight: 900;
+color: #448aff;
+font-family: Arial, sans-serif;
+margin-top: 15px;
+margin-bottom: 0;
+line-height: 1.2;
+letter-spacing: 1px;
+}
+
+.plan-card {
+text-align: center;
+}
+
+.plan-card.highlight {
+border-left-color: #0056b3;
+}
+
+.plan-notes {
+grid-column: 1 / -1;
+text-align: center;
+padding: 10px 0;
+}
+
+.plan-notes p {
+margin: 5px 0;
+}
+
+/* 9. お申し込みの流れ */
+.flow-steps {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 25px;
+align-items: stretch;
+}
+
+.step.new-style {
+display: flex;
+align-items: flex-start;
+height: 100%;
+}
+
+.step-num-box {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-right: 20px;
+flex-shrink: 0;
+min-width: 50px;
+}
+
+.step-num-box .num {
+font-size: 3.5rem;
+font-weight: 900;
+color: #007bff;
+line-height: 1;
+font-family: Arial, sans-serif;
+}
+
+.step-num-box .label {
+font-size: 0.9rem;
+font-weight: bold;
+color: #007bff;
+margin-top: 5px;
+letter-spacing: 1px;
+}
+
+.step-content {
+flex: 1;
+min-width: 0;
+}
+
+.step-content h3 {
+color: #333333;
+font-size: 1.15rem;
+font-weight: bold;
+margin: 5px 0 10px;
+border-bottom: 1px solid #eeeeee;
+padding-bottom: 10px;
+}
+
+.step-content p {
+margin: 0;
+font-size: 0.95rem;
+color: #555555;
+overflow-wrap: anywhere;
+}
+
+/* 10. ボタン */
+.btn-area {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+flex-wrap: wrap;
+margin-top: 30px;
+}
+
+.btn-primary {
+background-color: #ffffff;
+color: #007bff;
+border: 2px solid #007bff;
+border-radius: 50px;
+padding: 12px 30px;
+font-weight: bold;
+text-decoration: none;
+display: inline-block;
+text-align: center;
+transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+background-color: #007bff;
+color: #ffffff;
+}
+
+.hero .btn-primary {
+background-color: #ffffff;
+color: #0056b3;
+border: none;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero .btn-primary:hover {
+background-color: #e6f2ff;
+color: #0056b3;
+transform: translateY(-3px);
+}
+
+/* 11. 代表あいさつ */
+.wrap-container {
+max-width: 850px;
+margin: 0 auto;
+text-align: left;
+}
+
+.wrap-container > p:first-child {
+font-weight: bold;
+}
+
+.wrap-container img {
+display: block;
+width: 165px;
+max-width: 100%;
+height: auto;
+margin: 20px auto;
+border-radius: 8px;
+}
+
+.wrap-container p {
+margin-bottom: 1.5em;
+}
+
+/* 12. お申し込み・お問い合わせ */
+#apply .container > p,
+#contact .container > p {
+text-align: center;
+}
+
+/* 13. フッター */
+.footer {
+background: #333333;
+color: #ffffff;
+text-align: center;
+padding: 10px 20px;
+}
+
+.footer p {
+margin: 5px 0;
+font-size: 0.9rem;
+}
+
+/* 14. タブレット */
+@media (max-width: 900px) {
+.grid-3 {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.flow-steps {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 18px;
+}
+
+.step.new-style {
+flex-direction: column;
+}
+
+.step-num-box {
+flex-direction: row;
+align-items: baseline;
+margin: 0 0 12px;
+border-bottom: 2px solid #f0f8ff;
+width: 100%;
+padding-bottom: 8px;
+}
+
+.step-num-box .num {
+font-size: 2.3rem;
+margin-right: 10px;
+}
+
+.step-num-box .label {
+font-size: 0.8rem;
+margin-top: 0;
+}
+}
+
+/* 15. スマートフォン */
+@media (max-width: 600px) {
+body {
+padding-top: 60px;
+}
+
+.container {
+padding-left: 15px;
+padding-right: 15px;
+}
+
+.header .container {
+padding-left: 12px;
+padding-right: 12px;
+gap: 8px;
+}
+
+.logo img {
+height: 32px;
+max-width: 160px;
+}
+
+#nav-list {
+gap: 6px;
+}
+
+#nav-list a {
+font-size: 0.7rem;
+padding: 5px 9px;
+}
+
+.hero {
+padding: 90px 18px;
+}
+
+.hero .hero-title {
+font-size: clamp(1.7rem, 6vw, 2.3rem);
+}
+
+.hero p {
+font-size: 1rem;
+}
+
+.section {
+padding: 25px 0;
+}
+
+.section-title {
+font-size: 1.3rem;
+padding: 12px 22px;
+margin: 20px auto 30px;
+}
+
+.grid-2,
+.grid-3,
+.flow-steps {
+grid-template-columns: minmax(0, 1fr);
+gap: 18px;
+}
+
+.card,
+.plan-card,
+.step {
+padding: 20px;
+border-left-width: 7px;
+}
+
+.card h3,
+.plan-card h3 {
+font-size: 1.15rem;
+}
+
+.service-catch {
+font-size: 1.05rem;
+padding: 9px 18px;
+max-width: calc(100% - 20px);
+}
+
+ul.check-list li {
+font-size: 0.95rem;
+}
+
+.price {
+font-size: 2.2rem;
+}
+
+.step.new-style {
+flex-direction: row;
+}
+
+.step-num-box {
+flex-direction: column;
+align-items: center;
+width: auto;
+min-width: 40px;
+margin: 0 12px 0 0;
+border-bottom: none;
+padding-bottom: 0;
+}
+
+.step-num-box .num {
+font-size: 2.2rem;
+margin-right: 0;
+}
+
+.step-num-box .label {
+font-size: 0.65rem;
+}
+
+.step-content h3 {
+font-size: 1rem;
+margin-top: 0;
+}
+
+.step-content p {
+font-size: 0.85rem;
+line-height: 1.7;
+}
+
+.btn-primary {
+max-width: 100%;
+padding: 11px 24px;
+}
+
+.wrap-container {
+padding: 0 5px;
+}
+
+.footer {
+padding: 12px 10px;
+}
+}
+
+/* 16. 小型スマートフォン */
+@media (max-width: 360px) {
+.logo img {
+height: 27px;
+max-width: 120px;
+}
+
+#nav-list {
+gap: 4px;
+}
+
+#nav-list a {
+font-size: 0.65rem;
+padding: 5px 7px;
+}
+
+.step.new-style {
+padding: 15px 12px;
+}
+
+.step-num-box {
+min-width: 32px;
+margin-right: 8px;
+}
+}
