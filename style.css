@@ -640,3 +640,85 @@ min-width: 32px;
 margin-right: 8px;
 }
 }
+
+
+/* お申し込み一時停止のお知らせ */
+.application-notice {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.application-notice__inner {
+  background-color: #fff8eb;
+  border: 1px solid #ead8b8;
+  border-radius: 12px;
+  padding: 24px 30px;
+  box-sizing: border-box;
+}
+
+.application-notice__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.application-notice__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #f0dfbf;
+  color: #795b2b;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.application-notice__heading h2 {
+  margin: 0;
+  color: #5d4b32;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.application-notice__inner p {
+  margin: 0 0 12px;
+  color: #51483d;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.application-notice__inner .application-notice__footer {
+  margin-bottom: 0;
+}
+
+/* スマートフォン対応 */
+@media screen and (max-width: 600px) {
+  .application-notice {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  .application-notice__inner {
+    padding: 20px 18px;
+  }
+
+  .application-notice__heading {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .application-notice__heading h2 {
+    font-size: 17px;
+  }
+
+  .application-notice__inner p {
+    font-size: 14px;
+  }
+}
+
